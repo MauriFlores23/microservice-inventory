@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: apigateway-inventory
+
+  cloud:
+    gateway:
+      routes:
+        - id: inventoryservice
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: inventoryCircuitBreaker
+                fallbackUri: forward:/fallback/inventory
