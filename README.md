@@ -41,10 +41,9 @@ Punto único de entrada al sistema.
 
 ## 📡 Endpoints principales
 
-POST /api/products
-GET /api/products
-GET /api/products/{id}
-PUT /api/products/{id}/stock
-DELETE /api/products/{id}
+- POST /api/products
+- GET /api/products
+- GET /api/products/{id}
+- PUT /api/products/{id}/stock
+- DELETE /api/products/{id}
 
-### Inventory Service
